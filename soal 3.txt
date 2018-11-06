@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Soal 3</title>
+    <style> 
+    </style>
+</head>
+<body>
+    
+        Nama : <input id="nama" type="text" ><br><br>
+        <center>
+        Tanggal Lahir:<input id ='angka 2' type="date" > <br><br>
+        </center>
+        <r>
+        Kota:<input id ='text' type='text'/><br><br>
+        </r>
+        <center><button onclick="data()"> D A F T A R </button></center>
+        <button onclick="Nama()">Sort Nama ke Atas</button>
+        <button onclick="Nama()">Sort Nama ke Bawah</button>
+        <button onclick="Usia()">Sort Usia ke Atas</button>
+        <button onclick="Usia()">Sort Usia ke Bawah</button>
+        <button onclick="Kota()">Sort kota ke Atas</button>
+        <button onclick="Kota()">Sort Kota ke Bawah</button>
+        <r><button onclick="Hapus()">Hapus</button><r>
+        <button onclick="Hapus()">Hapus</button>
+        <table>
+            <thead id="thead"></thead>
+            <tbody id="tbody"></tbody>
+        </table> 
+    <script>
+        var users = ['Budi','Deni']
+        var month = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+        var zodiak = ['Sagitarius','Scorpio','Taurus','Capricorn', 'Libra','Aries', 'Virgo','Cancer', 'Leo','Pisces']
+        function data() {
+            var dataUser = {
+                nama: document.getElementById('Budi').value,
+                tahunlahir: document.getElementById('1986').value.slice(0, 4),
+                bulan: month[parseInt(document.getElementById('Januari').value.slice(5, 7) - 1)],
+                tanggal: document.getElementById('12').value.slice(8, 10),
+                usia: 2018 - document.getElementById('32').value.slice(0, 4),
+                pensiun: (2018 - document.getElementById('1986').value.slice(0, 4)) - 23,
+                kota: document.getElementById('Ambon').value,
+                nama: document.getElementById('Deni').value,
+                tahunlahir: document.getElementById('1985').value.slice(0, 4),
+                bulan: month[parseInt(document.getElementById('september').value.slice(5, 7) - 1)],
+                tanggal: document.getElementById('24').value.slice(8, 10),
+                usia: 2018 - document.getElementById('33').value.slice(0, 4),
+                pensiun: (2018 - document.getElementById('tahunlahir').value.slice(0, 4)) - 22,
+                kota: document.getElementById('Palu').value,
+                zodiak: function () {
+                    if (this.tanggal >= 12 && this.bulan == "Januari" || this.tanggal <= 20 && this.bulan == "April") {
+                        return 'Capricorn'
+                    } else if (this.tanggal >= 20 && this.bulan == "Januari" || this.tanggal <= 20 && this.bulan == "April") {
+                        return 'Aries'
+                    } 
+                }   
+            }
+        }
+    
+            </script>
+</body>
+</html>
